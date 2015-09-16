@@ -39,7 +39,7 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-//###############STYLES###HERE####################
+//###############STYLES###HERE###################
 
 body {
   width: 100%;
@@ -63,8 +63,36 @@ body {
   text-transform: uppercase;
 }
 
+.fancy-heading {
+  display: block;
+  position: relative;
+
+  text-align: center;
+  letter-spacing: 2px;
+
+  z-index: 999;
+}
+
+//###MENU###
+
+.sticky, .fixed{
+  z-index: 2000;
+
+  .top-bar {
+    padding: 0 1em;
+
+    ul li a {
+      letter-spacing: 1px !important;
+    }
+  }
+  .name h1{
+    @extend .fancy-heading;
+    color: $violet-light !important;
+  }
+}
+
 //###SECTION#STYLES###
-section.blocky, header {
+section.blocky, header, footer {
   display: block;
   box-sizing: border-box;
 
@@ -85,6 +113,7 @@ section.blocky, header {
   }
 }
 
+//###HEADER###
 header {
   width: 100%;
   height: auto;
@@ -96,21 +125,74 @@ header {
   background-position: center;
   background-attachment: fixed;
 
-  padding-top: 32vh;
+  padding-top: 5vh;
 
   vertical-align: middle;
+
   h1 {
-    font-family: "Roboto";
-    font-size: 3.2rem;
-    letter-spacing: 2px;
+    @extend .fancy-heading;
+    font-size: 4rem;
 
-    width: 90%;
-    left: 5%;
-    position: absolute;
-    display: block;
-
-    z-index: 999;
+    margin-bottom: 0.7rem;
   }
+
+  h2 {
+    @extend .fancy-heading;
+    font-size: 3rem;
+
+    margin-bottom: 9rem;
+  }
+
+  h3 {
+    @extend .fancy-heading;
+    font-size: 1.7rem;
+
+    margin-bottom: 9rem;
+  }
+
+  button{
+    position: relative;
+
+    width: auto;
+    height: auto;
+
+    padding: 0.2rem 0.9rem;
+    margin-bottom: 5rem;
+
+    overflow: hidden;
+    z-index: 1020;
+
+    background-color: transparent !important;
+    transition: all 0.13s ease-in !important;
+
+    &:hover {
+      background-color: $green-light !important;
+      box-shadow: 0 0 8px $green-light;
+    }
+
+    a {
+      @extend .fancy-heading;
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      padding: 0;
+    }
+
+  }
+}
+
+.arrow {
+  display: block;
+  position: relative;
+
+  width: auto;
+  height: auto;
+
+  margin-bottom: 5rem;
+
+  z-index: 1010;
 }
 
 .darken {
@@ -127,15 +209,41 @@ header {
   z-index: 1;
 }
 
-//###MENU#STYLES###
+//###CALCULATOR###
+.calculator {
+  background-color: $green-light;
 
-.top-bar {
-  z-index: 1000;
+  height: auto;
+  min-height: 50vh;
 
-  padding-left: 1em;
-  padding-right: 1em;
-
-  .name h1{
-    color: #369 !important;
+  h1, h2, h3, h4, h5, h6 {
+    @extend .fancy-heading;
+    white-space: nowrap;
   }
+  .pad {
+    padding-top: 1rem;
+  }
+}
+
+//###POINTS###
+.points {
+  height: auto;
+  min-height: 50vh;
+
+  background-color: $violet-lighter;
+  background-image: url("../images/arctic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+//###FOOTER###
+footer {
+  background-color: $violet;
 }

@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASH 4 HASH</title>
     <link rel="stylesheet" href="stylesheets/app.css">
+    <!--ANIMATE WOW-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <!--MODERNIZR-->
     <script src="bower_components/modernizr/modernizr.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic" rel="stylesheet" type="text/css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!--Google Font "Roboto", cyrillic-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--WOW-->
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init()</script>
   </head>
   <body>
     <!--MENU-->
@@ -22,22 +30,99 @@
         </ul>
         <section class="top-bar-section">
           <!--MENU ITEMS-->
-          <ul class="right"></ul>
+          <ul class="right">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Как это работает</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#"> Войти</a></li>
+          </ul>
         </section>
       </nav>
     </div>
     <!--HEADER-->
     <header>
-      <h1>Ваши дела процветают,<br>если у вас достаточно денег,<br>чтобы получить кредит в банке.</h1>
+      <h1 class="up wow fadeInDown">Российское Кредитное Общество</h1>
+      <h3 class="wow fadeInDown">Микрозаймы - быстро, легко и надежно.</h3>
+      <h2 class="wow fadeInDown">Ваши дела процветают,<br>если у вас достаточно денег,<br>чтобы получить кредит в банке.</h2>
       <div class="darken"></div>
+      <button class="round wow fadeInUp"><a href="#" class="up">
+          <h4>Создать Акканут</h4></a></button>
+      <div class="arrow wow fadeInUp"><img src="images/arrow.png"></div>
     </header>
+    <section class="blocky calculator">
+      <div class="row">
+        <div class="large-6 medium-6 small-12 columns wow fadeInLeft">
+          <h2 class="text-left">Рассчитать Заем:</h2>
+        </div>
+        <div class="large-6 medium-6 small-12 columns pad wow fadeInRight">
+          <h6 class="text-right">Вы получите деньги уже через <strong>20</strong> минут</h6>
+        </div>
+        <div class="large-12 columns wow fadeInLeft">
+          <h4 class="text-left">Сколько Вы хотите взять взаймы ?</h4>
+        </div>
+        <div class="large-12 columns wow fadeInRight">
+          <div class="row">
+            <div class="large-11 medium-10 small-9 columns">
+              <div data-slider data-options="display_selector: #days-off-count1; initial: 0;" class="range-slider round"><span role="slider" tabindex="0" class="range-slider-handle"></span><span class="range-slider-active-segment"></span></div>
+            </div>
+            <div class="large-1 medium-2 small-3 columns">
+              <input type="number" id="days-off-count1" value="0">
+            </div>
+          </div>
+        </div>
+        <div class="large-12 columns wow fadeInLeft">
+          <h4 class="text-left">На какой срок Вы берете займ ?</h4>
+        </div>
+        <div class="large-12 columns wow fadeInRight">
+          <div class="row">
+            <div class="large-11 medium-10 small-9 columns">
+              <div data-slider data-options="display_selector: #days-off-count2; initial: 0;" class="range-slider round"><span role="slider" tabindex="0" class="range-slider-handle"></span><span class="range-slider-active-segment"></span></div>
+            </div>
+            <div class="large-1 medium-2 small-3 columns">
+              <input type="number" id="days-off-count2" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blocky points">
+      <div class="fullWidth">
+        <div class="large-4 medium-4 small-12 columns wow fadeInLeft"><img src="images/p1.png">
+          <h2 class="wow fadeInUp">Безопасно</h2>
+          <h3 class="text-center wow fadeInUp">Все транзакции надежно защищены и секретны.</h3>
+        </div>
+        <div class="large-4 medium-4 small-12 columns wow fadeInDown"><img src="images/p2.png">
+          <h2 class="wow fadeInUp">Выгодно</h2>
+          <h3 class="text-center wow fadeInUp">Мы берем не более 1,5% в день.</h3>
+        </div>
+        <div class="large-4 medium-4 small-12 columns wow fadeInRight"><img src="images/p3.png">
+          <h2 class="wow fadeInUp">Быстро</h2>
+          <h3 class="text-center wow fadeInUp">На оформление займа Вы потратите всего лишь 20 минут.</h3>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row">
+        <div class="large-4 medium-6 small-12 columns wow fadeInDown">
+          <h3>Мы в соц.сетях</h3>
+        </div>
+        <div class="large-4 medium-6 small-12 columns wow fadeInDown">
+          <h3>Наши Партнеры</h3>
+        </div>
+        <div class="large-4 medium-12 small-12 columns wow fadeInDown">
+          <h3>Свяжитесь с нами</h3>
+        </div>
+      </div>
+    </footer>
     <!--SCRIPTS-->
     <!--JQUERY-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!--JQUERY EASING-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!--FOUNDATION-->
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <!--SMOOTHSCROLL-->
+    <script src="js/smoothscroll.js"></script>
     <!--APP-->
     <script src="js/app.js"></script>
   </body>
