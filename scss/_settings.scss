@@ -229,9 +229,9 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc(10);
-$h2-font-reduction: rem-calc(10);
-$h3-font-reduction: rem-calc(5);
+$h1-font-reduction: rem-calc(20);
+$h2-font-reduction: rem-calc(15);
+$h3-font-reduction: rem-calc(10);
 $h4-font-reduction: rem-calc(5);
 $h5-font-reduction: 0;
 $h6-font-reduction: 0;
@@ -1099,7 +1099,7 @@ $range-slider-bar-border-color: $gainsboro;
 // $range-slider-radius: $global-radius;
 // $range-slider-round: $global-rounded;
 $range-slider-bar-bg-color: $green;
-// $range-slider-active-segment-bg-color: scale-color($secondary-color, $lightness: -1%);
+$range-slider-active-segment-bg-color: $green;
 
 // Vertical bar styles
 // $range-slider-vertical-bar-width: rem-calc(16);
