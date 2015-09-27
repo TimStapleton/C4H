@@ -71,22 +71,22 @@ html
         .large-12.columns.wow.fadeInRight
           .row
             .large-11.medium-10.small-9.columns
-              .range-slider.round(data-slider data-options="display_selector: #days-off-count1; strat:5000; end: 30000; step: 100; initial: 5000;")
+              .range-slider.round(data-slider id="amount-silder" data-options="display_selector: #amount-output; start:5000; end: 30000; step: 100; initial: 5000;")
                 span.range-slider-handle(role="slider" tabindex="0")
                 span.range-slider-active-segment
             .large-1.medium-2.small-3.columns
-              input(type="number" id="days-off-count1" value="5000")
+              input(type="number" name="Amount" id="amount-output" value="5000")
     
         .large-12.columns.wow.fadeInLeft
           h4.text-left На какой срок Вы берете займ ?
         .large-12.columns.wow.fadeInRight
           .row
             .large-11.medium-10.small-9.columns
-              .range-slider.round(data-slider data-options="display_selector: #days-off-count2; initial: 3; start: 3; end: 30;")
+              .range-slider.round(data-slider id="days-slider" data-options="display_selector: #days-output; initial: 3; start: 3; end: 30;")
                 span.range-slider-handle(role="slider" tabindex="1")
                 span.range-slider-active-segment
             .large-1.medium-2.small-3.columns
-              input(type="number" id="days-off-count2" value="3")
+              input(type="number" name="Days" id="days-output" value="3")
     
     //###POINTS###
     section.blocky.points
@@ -129,6 +129,9 @@ html
             
     //APP
     script(src = "js/app.js")
+    
+    //SLIDER
+    script(src = "js/slider.js")
     
     //REFLOW SLIDER
     //script $document.foundation('slider', 'reflow');
